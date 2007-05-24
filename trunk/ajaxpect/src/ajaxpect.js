@@ -1,22 +1,27 @@
-Ajaxpect = new Object();
+var Ajaxpect = {
 
-Ajaxpect.addBefore = function(obj, fname, before) {
-    var oldFunc = obj[fname];
+  addBefore: function(obj, fname, before) {
+    var orig = obj[fname];
     obj[fname] = function() {
-        return oldFunc.apply(this, before(arguments, oldFunc, this));
-    };
-};
+      return orig.apply(this, before(arguments, orig, this));
+    }
+  },
 
-Ajaxpect.addAfter = function(obj, fname, after) {
-    var oldFunc = obj[fname];
+  addAfter: function(obj, fname, after) {
+    var orig = obj[fname];
     obj[fname] = function() {
-        return after(oldFunc.apply(this, arguments), arguments, oldFunc, this);
-    };
-};
+      return after(orig.apply(this, arguments), arguments, orig, this);
+    }
+  },
 
-Ajaxpect.addAround = function(obj, fname, around) {
-    var oldFunc = obj[fname];
+  addAround: function(obj, fname, around) {
+    var orig = obj[fname];
     obj[fname] = function() {
-        return around(arguments, oldFunc, this);
-    };
-};
+      return around(arguments, orig, this);
+    }
+  }
+
+}
+
+
+

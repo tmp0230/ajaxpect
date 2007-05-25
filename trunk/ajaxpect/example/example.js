@@ -1,4 +1,4 @@
-// Business logic
+// Example business logic
 
 function makeGreeting(text) {
     return "Hello " + text + "!";
@@ -6,7 +6,8 @@ function makeGreeting(text) {
 
 alert(makeGreeting("world")); // Hello world!
 
-// Advices
+
+// Advice definitions
 
 function aopizeAdvice(args) {
     args[0] = "AOP " + args[0];
@@ -21,7 +22,8 @@ function ciaoAdvice() {
     return "Bye-bye!";
 }
 
-// Let's go!
+
+// Adding advices
 
 Ajaxpect.addBefore(this, "makeGreeting", aopizeAdvice);
 alert(makeGreeting("world")); // Hello AOP world!
@@ -31,5 +33,3 @@ alert(makeGreeting("world")); // HELLO AOP WORLD!
 
 Ajaxpect.addAround(this, "makeGreeting", ciaoAdvice);
 alert(makeGreeting("world")); // Bye-bye!
-
-//

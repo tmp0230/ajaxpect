@@ -4,7 +4,7 @@ function makeGreeting(text) {
     return 'Hello ' + text + '!';
 }
 
-alert(makeGreeting("world")); // Hello world!
+alert(makeGreeting('world')); // Hello world!
 
 
 // Advice definitions

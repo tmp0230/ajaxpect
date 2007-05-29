@@ -30,8 +30,9 @@ function ciaoAdvice() {
 Ajaxpect.addBefore(thing, 'makeGreeting', aopizeAdvice);
 alert(thing.makeGreeting('world')); // Hello AOP world!
 
-Ajaxpect.addAfter(thing, 'makeGreeting', shoutAdvice);
+Ajaxpect.addAfter(thing, /make*/, shoutAdvice);
 alert(thing.makeGreeting('world')); // HELLO AOP WORLD!
 
-Ajaxpect.addAround(thing, 'makeGreeting', ciaoAdvice);
+var filter = function(name) { return name.indexOf('Greet') != -1 }
+Ajaxpect.addAround(thing, filter, ciaoAdvice);
 alert(thing.makeGreeting('world')); // Bye-bye!

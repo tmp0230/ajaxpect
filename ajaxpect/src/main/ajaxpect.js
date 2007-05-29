@@ -1,51 +1,53 @@
 var Ajaxpect = {
 
   addBefore: function(obj, filter, before) {
-    var linker = function(orig) {
+    var link = function(orig) {
       return function() {
         return orig.apply(this, before(arguments, orig, this));
       }
     }
-    this._processObject(obj, filter, before, linker);
+    this._process(obj, filter, link);
   },
 
   addAfter: function(obj, filter, after) {
-    var linker = function(orig) {
+    var link = function(orig) {
       return function() {
         return after(orig.apply(this, arguments), arguments, orig, this);
       }
     }
-    this._processObject(obj, filter, after, linker);
+    this._process(obj, filter, link);
   },
 
   addAround: function(obj, filter, around) {
-    var linker = function(orig) {
+    var link = function(orig) {
       return function() {
         return around(arguments, orig, this);
       }
     }
-    this._processObject(obj, filter, around, linker);
+    this._process(obj, filter, link);
   },
   
-  _processObject: function(obj, filter, advice, linker) {
-    if (! filter.exec) {
-      var orig = obj[filter];
-      obj[filter] = linker(orig);
-    } else {
+  _process: function(obj, filter, link) {
+    var check;
+    if (filter.exec) {
+      check = function(str) { return filter.exec(str) }
+    } else if (filter.call) {
+      check = function(str) { return filter.call(this, str) }
+    }
+    if (check) {
       for (var member in obj) {
-        if (this._testMember(obj, member, filter)) {
-          linker(obj, member, advice);
+        if (check(member)) {
+          this._attach(obj, member, link);
         }
       }
+    } else {
+      this._attach(obj, filter, link);
     }
   },
-  
-  _testMember: function(obj, member, filter) {
-    var check = filter.exec(member);
-    if (check && (!check.input || check[0])) {
-      return true;
-    }
-   	return false;
+
+  _attach: function(obj, member, link) {
+    var orig = obj[member];
+    obj[member] = link(orig);
   }
   
 }

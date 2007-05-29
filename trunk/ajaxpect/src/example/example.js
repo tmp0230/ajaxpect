@@ -1,10 +1,12 @@
 // Example business logic
 
-function makeGreeting(text) {
+var thing = {
+  makeGreeting: function(text) {
     return 'Hello ' + text + '!';
+  }
 }
 
-alert(makeGreeting('world')); // Hello world!
+alert(thing.makeGreeting('world')); // Hello world!
 
 
 // Advice definitions
@@ -25,11 +27,11 @@ function ciaoAdvice() {
 
 // Adding advices
 
-Ajaxpect.addBefore(this, 'makeGreeting', aopizeAdvice);
-alert(makeGreeting('world')); // Hello AOP world!
+Ajaxpect.addBefore(thing, 'makeGreeting', aopizeAdvice);
+alert(thing.makeGreeting('world')); // Hello AOP world!
 
-Ajaxpect.addAfter(this, 'makeGreeting', shoutAdvice);
-alert(makeGreeting('world')); // HELLO AOP WORLD!
+Ajaxpect.addAfter(thing, 'makeGreeting', shoutAdvice);
+alert(thing.makeGreeting('world')); // HELLO AOP WORLD!
 
-Ajaxpect.addAround(this, 'makeGreeting', ciaoAdvice);
-alert(makeGreeting('world')); // Bye-bye!
+Ajaxpect.addAround(thing, 'makeGreeting', ciaoAdvice);
+alert(thing.makeGreeting('world')); // Bye-bye!

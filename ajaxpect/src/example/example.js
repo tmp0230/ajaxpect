@@ -12,16 +12,16 @@ alert(thing.makeGreeting('world')); // Hello world!
 // Advice definitions
 
 function aopizeAdvice(args) {
-    args[0] = 'AOP ' + args[0];
-    return args;
+  args[0] = 'AOP ' + args[0];
+  return args;
 }
 
 function shoutAdvice(result) {
-    return result.toUpperCase();
+  return result.toUpperCase();
 }
 
 function ciaoAdvice() {
-    return 'Bye-bye!';
+  return 'Bye-bye!';
 }
 
 

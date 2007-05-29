@@ -1,3 +1,8 @@
+/*
+ * Ajaxpect 0.9.0
+ * http://code.google.com/p/ajaxpect
+ */
+
 var Ajaxpect = {
 
   addBefore: function(obj, filter, before) {

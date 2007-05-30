@@ -1,0 +1,5 @@
+The project was started back in 2003 as a [http://www.jroller.com/page/deep?entry=aop_fun_with_javascript blog post] titled "AOP Fun with !JavaScript".
+
+
+
+

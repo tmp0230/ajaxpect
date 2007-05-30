@@ -1,5 +1,3 @@
-= Ajaxpect usage example =
-
 {{{
 // Example business logic
 

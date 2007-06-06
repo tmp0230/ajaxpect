@@ -1,7 +1,7 @@
-[http://roman.porotnikov.googlepages.com/ajaxpect-logo.png http://roman.porotnikov.googlepages.com/ajaxpect-logo.png]
+http://roman.porotnikov.googlepages.com/ajaxpect-logo.png 
 
-[http://roman.porotnikov.googlepages.com/ajaxpect-logo-half.png http://roman.porotnikov.googlepages.com/ajaxpect-logo-half.png]
+http://roman.porotnikov.googlepages.com/ajaxpect-logo-half.png 
 
-[http://roman.porotnikov.googlepages.com/ajaxpect-logo-x.png http://roman.porotnikov.googlepages.com/ajaxpect-logo-x.png]
+http://roman.porotnikov.googlepages.com/ajaxpect-logo-x.png 
 
-[http://roman.porotnikov.googlepages.com/ajaxpect-logo-x-half.png http://roman.porotnikov.googlepages.com/ajaxpect-logo-x-half.png]
+http://roman.porotnikov.googlepages.com/ajaxpect-logo-x-half.png 

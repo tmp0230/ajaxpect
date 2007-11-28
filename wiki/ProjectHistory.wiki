@@ -1,4 +1,4 @@
-The project was started back in 2003 as a [http://www.jroller.com/page/deep?entry=aop_fun_with_javascript blog post] titled "AOP Fun with !JavaScript".
+The project was started back in 2003 as a [http://www.jroller.com/deep/entry/aop_fun_with_javascript blog post] titled "AOP Fun with !JavaScript".
 
 Refactored and branded "Ajaxpect", in 2007 the code was released as a version 0.8 of the project.
 

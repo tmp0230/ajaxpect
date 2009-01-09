@@ -1,1 +1,3 @@
-[http://helma.zumbrunn.com/reference/helma.Aspects.html Aspects - Helma Javascript Reference]
+[http://helma.zumbrunn.com/reference/helma.Aspects.html Helma]
+
+[http://www.pathf.com/blogs/2007/07/ajaxpect-aop-fo/ Pathfinder]

@@ -1,0 +1,2 @@
+[http://helma.zumbrunn.com/reference/helma.Aspects.html Aspects - Helma Javascript Reference
+]
